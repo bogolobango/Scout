@@ -3,3 +3,6 @@ node_modules
 .env
 .env.local
 .vercel
+
+# Runtime artifacts (created by the sample-gate API)
+private/sample-emails.log

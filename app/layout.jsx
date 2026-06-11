@@ -2,13 +2,13 @@ import "./globals.css";
 import { site } from "../config/site";
 
 export const metadata = {
-  title: `${site.name} — Candidate research in 12 minutes, not 2 hours`,
+  title: `${site.name} - Client-ready candidate briefs in 12 minutes`,
   description:
-    "A Claude skill that turns role specs into client-ready candidate and company briefs. Install once, run on every search.",
+    "A Claude skill for boutique recruiters. Turns a role spec into a 5-page candidate brief with honest competency flags and interview probes. Install once, run on every search.",
   openGraph: {
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name} - ${site.tagline}`,
     description:
-      "Client-ready candidate briefs in ~12 minutes. One-time purchase, instant download.",
+      "5-page candidate briefs in ~12 minutes. Runs in your own Claude account. $299 one-time, founder pricing.",
     url: `https://${site.domain}`,
     siteName: site.name,
     type: "website",
