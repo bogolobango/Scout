@@ -491,6 +491,84 @@ h2 {
   border: 1px solid rgba(255, 197, 110, 0.4);
 }
 
+/* ---------- sample gate ---------- */
+.sample-section {
+  padding: 24px 0 88px;
+}
+
+.sample-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(18px);
+  padding: 44px;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.sample-card h2 {
+  margin-top: 8px;
+}
+
+.sample-card .section-sub {
+  margin: 0 auto 28px;
+  max-width: 56ch;
+}
+
+.gate {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.gate input {
+  flex: 1 1 280px;
+  max-width: 360px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(139, 143, 168, 0.35);
+  background: rgba(6, 6, 11, 0.6);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+
+.gate input:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+  border-color: var(--cyan);
+}
+
+.gate input:disabled {
+  opacity: 0.6;
+}
+
+.gate-err {
+  flex-basis: 100%;
+  color: var(--amber);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.gate--done {
+  padding: 18px 20px;
+  border: 1px solid rgba(94, 242, 184, 0.4);
+  border-radius: 12px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.sample-foot {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-top: 22px;
+}
+
 /* ---------- pricing ---------- */
 .pricing {
   display: grid;
@@ -498,7 +576,7 @@ h2 {
 }
 
 .price-card {
-  width: min(560px, 100%);
+  width: min(580px, 100%);
   background: var(--panel);
   border: 1px solid rgba(77, 227, 255, 0.35);
   border-radius: 20px;
@@ -506,6 +584,130 @@ h2 {
   box-shadow: 0 0 80px rgba(124, 92, 255, 0.18);
   padding: 44px;
   text-align: center;
+  position: relative;
+}
+
+.scarcity {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  border: 1px solid rgba(255, 197, 110, 0.4);
+  background: rgba(255, 197, 110, 0.06);
+  border-radius: 100px;
+  padding: 6px 14px;
+  margin-bottom: 22px;
+}
+
+.anchor-stack {
+  text-align: left;
+  margin: 0 auto 28px;
+  max-width: 380px;
+  border: 1px solid rgba(139, 143, 168, 0.16);
+  border-radius: 12px;
+  padding: 18px 22px;
+  background: rgba(6, 6, 11, 0.35);
+}
+
+.anchor-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 6px 0;
+  font-size: 15px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+
+.anchor-row .anchor-cost {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.anchor-row--us {
+  border-top: 1px solid rgba(139, 143, 168, 0.18);
+  margin-top: 8px;
+  padding-top: 14px;
+  color: var(--text);
+}
+
+.anchor-row--us .anchor-cost {
+  background: linear-gradient(90deg, var(--violet), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.anchor-foot {
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--cyan);
+  text-align: center;
+}
+
+.guarantee {
+  margin-top: 22px;
+  font-size: 14.5px;
+  color: var(--text);
+  border-top: 1px dashed rgba(139, 143, 168, 0.22);
+  padding-top: 18px;
+}
+
+.guarantee strong {
+  color: var(--green);
+}
+
+/* ---------- founder ---------- */
+.founder {
+  padding-top: 24px;
+}
+
+.founder-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 44px;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(18px);
+  padding: 40px;
+}
+
+.founder-photo {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+  display: block;
+}
+
+.founder-body h2 {
+  margin-bottom: 16px;
+}
+
+.founder-body p {
+  color: var(--muted);
+  font-size: 17px;
+  margin-bottom: 14px;
+}
+
+.founder-sign {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  color: var(--text);
+  margin-top: 18px;
+}
+
+.founder-sign a {
+  color: var(--cyan);
+  text-decoration: none;
 }
 
 .price-amount {
@@ -671,5 +873,22 @@ footer {
   }
   .matrix-row--head {
     display: none;
+  }
+  .sample-card,
+  .founder-card,
+  .price-card {
+    padding: 28px;
+  }
+  .founder-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+  .founder-photo {
+    margin: 0 auto;
+    max-width: 220px;
+  }
+  .anchor-stack {
+    padding: 14px 16px;
   }
 }
